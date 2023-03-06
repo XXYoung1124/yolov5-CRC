@@ -1,0 +1,65 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+# Hyperparameters for COCO training from scratch
+# python train.py --batch 40 --cfg yolov5m.yaml --weights '' --data coco.yaml --img 640 --epochs 300
+# See tutorials for hyperparameter evolution https://github.com/ultralytics/yolov5#tutorials
+
+lr0: 0.01  # 初始学习率 (SGD=1E-2, Adam=1E-3)
+lrf: 0.1  #  循环学习率 (lr0 * lrf)
+momentum: 0.937  # SGD momentum/Adam beta1 学习率动量
+weight_decay: 0.0005  # 权重衰减系数
+warmup_epochs: 3.0  #   预热学习 (fractions ok)
+warmup_momentum: 0.8  #   预热学习动量
+warmup_bias_lr: 0.1  # 预热初始学习率
+box: 0.05  #  iou损失系数
+cls: 0.5  #  cls损失系数
+cls_pw: 1.0  #  cls BCELoss正样本权重
+obj: 1.0  # 有无物体系数(scale with pixels)
+obj_pw: 1.0  # 有无物体BCELoss正样本权重
+iou_t: 0.20  # IoU训练时的阈值
+anchor_t: 4.0  #anchor的长宽比（长:宽 = 4:1）
+
+#1
+#lr0: 0.005
+#lrf: 0.15
+#momentum: 0.9
+#weight_decay: 0.0005
+#warmup_epochs: 2.0
+#warmup_momentum: 0.5
+#warmup_bias_lr: 0.1
+#box: 0.05
+#cls: 0.5
+#cls_pw: 1.0
+#obj: 1.0
+#obj_pw: 1.0
+#iou_t: 0.20
+#anchor_t: 4.0
+
+
+
+
+# anchors: 3  # 每个输出层的anchors数量(0 to ignore)
+
+
+
+
+
+
+
+
+#以下系数是数据增强系数，包括颜色空间和图片空间
+fl_gamma: 0.0  # focal loss gamma (efficientDet default gamma=1.5)
+hsv_h: 0.015  #  色调 (fraction)
+hsv_s: 0.7  #  饱和度 (fraction)
+hsv_v: 0.4  # 亮度 (fraction)
+degrees: 0.0  # 旋转角度 (+/- deg)
+translate: 0.1  #  平移(+/- fraction)
+scale: 0.5  #   图像缩放 (+/- gain)
+shear: 0.0  #  图像剪切 (+/- deg)
+perspective: 0.0  #   透明度 (+/- fraction), range 0-0.001
+flipud: 0.0  #  进行上下翻转概率 (probability)
+fliplr: 0.5  #   进行左右翻转概率 (probability)
+mosaic: 1.0  #   进行Mosaic概率 (probability)
+mixup: 0.0  #   进行图像混叠概率（即，多张图像重叠在一起） (probability)
+copy_paste: 0.0  # segment copy-paste (probability)
+
+
