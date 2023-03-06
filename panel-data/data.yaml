@@ -1,0 +1,18 @@
+names:
+  - Crack
+  - Grid
+  - Spot
+
+nc: 3 # number of classes
+
+train: panel-data/train/images
+
+val: panel-data/valid/images
+
+
+
+
+
+
+
+
